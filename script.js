@@ -84,9 +84,9 @@ let game = () => {
   }
 
   if (player > computer) {
-    console.log("playerWin");
+    console.log("Player-Wins-The-Game");
   } else {
-    console.log("computerWin");
+    console.log("Computer-Wins-The-Game");
   }
 };
 
