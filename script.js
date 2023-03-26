@@ -1,5 +1,5 @@
 let playerSelection = () => {
-  prompt(
+  return prompt(
     "Enter your choice \n 1. Rock \n 2. Paper \n 3. Scissor"
   ).toLowerCase();
 };
