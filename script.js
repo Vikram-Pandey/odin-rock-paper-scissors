@@ -68,9 +68,9 @@ let game = () => {
   let player = 0;
   let computer = 0;
   while (count < 5) {
-    let personal = playerSelection();
-    let computer = getComputerChoice();
-    let roundResult = playRound(personal, computer);
+    let personalChoice = playerSelection();
+    let computerChoice = getComputerChoice();
+    let roundResult = playRound(personalChoice, computerChoice);
 
     if (roundResult == -1) {
       computer++;
@@ -85,11 +85,19 @@ let game = () => {
 
   if (player > computer) {
     console.log(
-      "Player-Wins-The-Game" + "Player : " + player + "Computer : " + computer
+      "Player-Wins-The-Game ->" +
+        "Player : " +
+        player +
+        " Computer : " +
+        computer
     );
   } else {
     console.log(
-      "Computer-Wins-The-Game" + "Player : " + player + "Computer : " + computer
+      "Computer-Wins-The-Game ->" +
+        "Player : " +
+        player +
+        " Computer : " +
+        computer
     );
   }
 };
