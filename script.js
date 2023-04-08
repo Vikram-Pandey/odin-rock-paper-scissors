@@ -43,13 +43,10 @@ let playRound = (playerSelection, computerSelection) => {
   switch (playerSelection) {
     case "rock":
       if (computerSelection == "paper") {
-        //  console.log("You Lose! Paper beats Rock");
         roundResult = -1;
       } else if (computerSelection == "rock") {
-        //   console.log("Play Again: Tie");
         roundResult = 0;
       } else {
-        //   console.log("You Win! Rock beats Scissors");
         roundResult = 1;
       }
 
@@ -57,26 +54,20 @@ let playRound = (playerSelection, computerSelection) => {
 
     case "paper":
       if (computerSelection == "paper") {
-        //   console.log("Play Again: Tie");
         roundResult = 0;
       } else if (computerSelection == "rock") {
-        //   console.log("You Win! Paper beats Rock");
         roundResult = 1;
       } else {
-        //   console.log("You Lose! Scissors beats Paper");
         roundResult = -1;
       }
       break;
 
     case "scissors":
       if (computerSelection == "paper") {
-        //   console.log("You Win! Scissors beats Paper");
         roundResult = 1;
       } else if (computerSelection == "rock") {
-        //   console.log("You Lose! Rock beats Scissors");
         roundResult = -1;
       } else {
-        //   console.log("Play Again: Tie");
         roundResult = 0;
       }
       break;
@@ -84,13 +75,9 @@ let playRound = (playerSelection, computerSelection) => {
   game(roundResult, playerSelection, computerSelection);
 };
 
-// game(playerSelection, getComputerChoice());
-
 let count = 0;
 let player = 0;
 let computer = 0;
-// let personalChoice = playerSelection();
-// let computerChoice = getComputerChoice();
 
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -113,7 +100,7 @@ function game(roundResult, playerSelection, computerSelection) {
       plyr.innerText = player;
       const pelementCase0 = document.createElement("p");
       pelementCase0.innerText = `Round Tie! Try Again`;
-      // result.appendChild(pelementCase0);
+
       tie.appendChild(pelementCase0);
     } else if (roundResult == 1) {
       tie.innerText = "";
@@ -122,16 +109,11 @@ function game(roundResult, playerSelection, computerSelection) {
       plyr.innerText = player;
     }
   }
-  //   const helement = document.createElement("h1");
-  //   helement.textContent = "Choose an option!";
-  //   result.appendChild(helement);
-  // } else {
+
   if (player == 5 || computer == 5) {
     if (player > computer) {
       result.innerHTML = "";
-      // const h1element = document.createElement("h1");
-      // h1element.innerText = "Result";
-      // result.appendChild(h1element);
+
       const helement = document.createElement("h1");
       helement.textContent =
         "Player-Wins-The-Game ->" +
@@ -142,9 +124,6 @@ function game(roundResult, playerSelection, computerSelection) {
       result.appendChild(helement);
     } else {
       result.innerHTML = "";
-      // const h1element = document.createElement("h1");
-      // h1element.innerText = "Result";
-      // result.appendChild(h1element);
 
       const helement = document.createElement("h1");
 
