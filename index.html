@@ -5,10 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Welcome to Rock-Paper-Scissors World</h1>
-    <h1>UI COMING SOON... For now check your progress via console</h1>
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <h3>First to 5 Wins!</h3>
+      <!-- <h1>Choose</h1> -->
+      <div id="btns">
+        <div id="rock">
+          <img class="img" src="images\rock.png" alt="rock" />
+        </div>
+        <div id="paper">
+          <img class="img" src="images\paper.png" alt="paper" />
+        </div>
+        <div id="scissors">
+          <img class="img" src="images\scissors.png" alt="scissors" />
+        </div>
+      </div>
+
+      <!-- <h1>Result</h1> -->
+      <div id="result">
+        <div id="p1">
+          <h2>Player</h2>
+          <p id="plyr">0</p>
+        </div>
+        <div id="c1">
+          <h2>Computer</h2>
+          <p id="comp">0</p>
+        </div>
+      </div>
+
+      <div id="tie"></div>
+
+      <div id="resetClass">
+        <button id="reset">Play Again!</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
